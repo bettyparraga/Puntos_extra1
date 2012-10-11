@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Correo electrónico</b>
+  <%= @cliente.email %>
+</p>
+
+<p>
+  <b>Nombre y Apellidos</b>
+  <%= @cliente.nombre %>
+</p>
+
+<p>
+  <b>Cuenta Twitter	</b>
+  <%= @cliente.dirtwitter %>
+</p>
+
+
+<%= link_to 'Editar', edit_cliente_path(@cliente) %> |
+<%= link_to 'Volver', clientes_path %>

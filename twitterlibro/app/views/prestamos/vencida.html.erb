@@ -1,0 +1,26 @@
+<h1>Listing prestamos vencidos </h1>
+
+<table>
+ <tr>
+   <th>Cliente</th>
+   <th>Libro</th>
+   <th>Fecha inicio prestamo</th>
+   <th>Fecha fin prestamo</th>
+   <th></th>
+ </tr>
+
+<% @prestamos.each do |prestamo| %>
+ <tr>
+   <td><%= prestamo.cliente.nombre %></td>
+   <td><%= prestamo.libro.titulo %></td>
+   <td><%= prestamo.fi_prestamo %></td>
+   <td><%= prestamo.ff_prestamo %></td>
+   <td><%= link_to 'Enviar Tweet', enviar_mensaje_prestamo_path(prestamo) %></td>
+ </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Página principal', home_index_path %>
+ 

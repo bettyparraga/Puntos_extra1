@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  fi_prestamo: 2012-10-11
+  ff_prestamo: 2012-10-11
+  fechadevolucion: 2012-10-11
+  cliente: 
+  libro: 
+
+two:
+  fi_prestamo: 2012-10-11
+  ff_prestamo: 2012-10-11
+  fechadevolucion: 2012-10-11
+  cliente: 
+  libro: 

@@ -1,0 +1,6 @@
+<h1>Tweet enviado a <%=@prestamo.cliente.nombre%> </h1>
+<p><%@prestamo.enviar_mensaje(@prestamo)%></p>
+<br><br><br><br>
+<%= link_to "Ir a prestamos", prestamos_path %>
+<br><br><br><br>
+<%= link_to 'Ir a página principal', home_index_path %>

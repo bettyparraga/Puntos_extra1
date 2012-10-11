@@ -1,0 +1,35 @@
+<%= form_for(@prestamo) do |f| %>
+  <% if @prestamo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@prestamo.errors.count, "error") %> prohibited this prestamo from being saved:</h2>
+
+      <ul>
+      <% @prestamo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="field">
+    <%= f.label "cliente" %><br />
+    <%= f.collection_select :cliente_id, Cliente.all, :id, :nombre, :prompt => true %>
+  
+  </div>
+  <div class="field">
+    <%= f.label "libro" %><br />
+    <%= f.collection_select :libro_id, Libro.all, :id, :titulo, :prompt => true %>
+  </div>
+  <div class="field">
+    <%= f.label "Fecha de inicio de préstamo" %><br />
+    <%= f.date_select :fi_prestamo %>
+  </div>
+  <div class="field">
+    <%= f.label "Fecha fin de préstamo" %><br />
+    <%= f.date_select :ff_prestamo %>
+  </div><br />
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,34 @@
+<h1>Listing clientes</h1>
+
+<table>
+  <tr>
+    <th>Email</th>
+    <th>Nombre</th>
+    <th>Dirtwitter</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @clientes.each do |cliente| %>
+  <tr>
+    <td><%= cliente.email %></td>
+    <td><%= cliente.nombre %></td>
+    <td><%= cliente.dirtwitter %></td>
+    <td><%= link_to 'Show', cliente %></td>
+    <td><%= link_to 'Edit', edit_cliente_path(cliente) %></td>
+    <td><%= link_to 'Destroy', cliente, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nuevo Cliente', new_cliente_path %>
+<br />
+<br />
+<%= link_to 'Nuevo Prestamo', new_prestamo_path %>
+<br><br>
+<%= link_to "Libros", libros_path %>
+<br><br>
+<%= link_to 'Página principal', home_index_path %>

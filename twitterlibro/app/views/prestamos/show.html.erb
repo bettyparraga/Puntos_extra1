@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Fi prestamo:</b>
+  <%= @prestamo.fi_prestamo %>
+</p>
+
+<p>
+  <b>Ff prestamo:</b>
+  <%= @prestamo.ff_prestamo %>
+</p>
+
+<p>
+  <b>Fechadevolucion:</b>
+  <%= @prestamo.fechadevolucion %>
+</p>
+
+<p>
+  <b>Cliente:</b>
+  <%= @prestamo.cliente.nombre %>
+</p>
+
+<p>
+  <b>Libro:</b>
+  <%= @prestamo.libro.titulo %>
+</p>
+
+
+<%= link_to 'Edit', edit_prestamo_path(@prestamo) %> |
+<%= link_to 'Back', prestamos_path %>

@@ -1,0 +1,33 @@
+<h1>Listing libros</h1>
+
+<table>
+  <tr>
+    <th>Titulo</th>
+    <th>Comentario</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @libros.each do |libro| %>
+  <tr>
+    <td><%= libro.titulo %></td>
+    <td><%= libro.comentario %></td>
+    <td><%= link_to 'Show', libro %></td>
+    <td><%= link_to 'Edit', edit_libro_path(libro) %></td>
+    <td><%= link_to 'Destroy', libro, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Libro', new_libro_path %>
+
+<br />
+<br />
+<%= link_to 'Nuevo Prestamo', new_prestamo_path %>
+<br><br>
+<%= link_to "Clientes", clientes_path %>
+<br><br>
+<%= link_to 'Página principal', home_index_path %>
